@@ -141,3 +141,17 @@ It is suitable for **research showcases, competitions, and university applicatio
 ## License
 
 This project is released for **educational and research purposes**.
+
+## Research Motivation & Design Rationale
+
+Most waste classification systems optimize for accuracy under the assumption that predictions will be blindly trusted.
+However, in real world recycling scenarios, misclassification can actively reinforce incorrect disposal behavior.
+
+This project explores a different design question:
+
+Can explainability and uncertainty awareness influence how humans interact with AI predictions in environmentally sensitive decisions?
+
+Instead of treating Grad-CAM as a debugging tool, it is used as a communication interface between the model and the user.
+Monte Carlo Dropout is integrated not merely for uncertainty estimation, but to gate system behavior, signaling when human confirmation is required.
+
+The system is intentionally lightweight to reflect real deployment constraints (edge devices, public kiosks), prioritizing interpretability, trust, and interaction over raw benchmark performance.
